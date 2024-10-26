@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beasiswa ITPLN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Halaman Utama -->
+    <header>
+        <img src="Logo Institut Teknologi PLN.png" alt="Logo" class="logo"> 
+        <h1>Beasiswa ITPLN</h1>
+    </header>
+    <section class="container welcome-section">
+        <img src="foto itpln.png" alt="Foto itpln">
+        
+        <div class="horizontal-info">
+            <div class="info-section">
+                <h2>Informasi Beasiswa</h2>
+                <p><strong>Beasiswa ITPLN</strong> adalah program beasiswa yang diberikan oleh Institut Teknologi PLN (ITPLN) untuk mendukung mahasiswa yang memiliki prestasi akademik dan minat kuat dalam bidang teknik, energi, dan teknologi informasi. Program ini bertujuan untuk mempersiapkan lulusan yang berkualitas dan berdaya saing tinggi di sektor energi dan teknologi.</p>
+                
+                <h3>Jenis Beasiswa:</h3>
+                <ul>
+                    <li><strong>Beasiswa Akademik</strong>: Membiayai penuh atau sebagian biaya kuliah bagi mahasiswa berprestasi.</li>
+                    <li><strong>Beasiswa Riset dan Inovasi</strong>: Memberikan dukungan dana bagi mahasiswa yang terlibat dalam riset atau proyek inovasi di bidang energi atau teknologi.</li>
+                </ul>
+            </div>
+            <div class="info-section">
+                <h2>Kontak Kami</h2>
+                <p>Email: <a href="mailto:beasiswa@itpln.ac.id">beasiswa@itpln.ac.id</a></p>
+            </div>
+        </div>
+        
+        <a href="javascript:void(0);" class="btn" onclick="showSection('form-section')">Masuk ke Form Pendaftaran</a>
+    </section>
+
+    <!-- Halaman Form Pendaftaran -->
+    <section class="container form-section hidden">
+        <h2>Formulir Pendaftaran Beasiswa</h2>
+        <form>
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telepon">Nomor Telepon:</label>
+                <input type="tel" id="telepon" name="telepon" required>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <input type="text" id="alamat" name="alamat" required>
+            </div>
+            <div class="form-group">
+                <label for="tanggalLahir">Tanggal Lahir:</label>
+                <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+            </div>
+            <div class="form-group">
+                <label for="jenisKelamin">Jenis Kelamin:</label>
+                <select id="jenisKelamin" name="jenisKelamin" required>
+                    <option value="Pria">Pria</option>
+                    <option value="Wanita">Wanita</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pendidikan">Pendidikan Terakhir:</label>
+                <input type="text" id="pendidikan" name="pendidikan" required>
+            </div>
+            <div class="form-group">
+                <label for="ipk">IPK:</label>
+                <input type="text" id="ipk" name="ipk" required>
+            </div>
+            <div class="form-group">
+                <label for="esai">Esai Motivasi:</label>
+                <textarea id="esai" name="esai" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="referensi">Referensi Akademik:</label>
+                <input type="text" id="referensi" name="referensi" required>
+            </div>
+            <a href="javascript:void(0);" class="btn" onclick="showSection('welcome-section')">Kembali</a>
+            <a href="javascript:void(0);" class="btn" onclick="alert('Pendaftaran Berhasil!')">Daftar</a>
+            <a href="javascript:void(0);" class="btn" onclick="showSection('team-section')">Lihat Tim Kami</a>
+        </form>
+    </section>
+
+    <!-- Halaman Tim Kami -->
+    <section class="container team-section hidden">
+        <h2>Tim Kami</h2>
+        <div class="team-info">
+            <p><strong>Nama:</strong> Muhammad Rizki Insani</p>
+            <p><strong>NIM:</strong> 202331319</p>
+            <p><strong>Jurusan:</strong> Informatika</p>
+        </div>
+        <div class="team-info">
+            <p><strong>Nama:</strong> Antonio Gerald Renjaan</p>
+            <p><strong>NIM:</strong> 202331289</p>
+            <p><strong>Jurusan:</strong> Informatika</p>
+        </div>
+        <a href="javascript:void(0);" class="btn" onclick="showSection('welcome-section')">Kembali ke Beranda</a>
+    </section>
+
+    <script>
+        function showSection(section) {
+            document.querySelectorAll('section').forEach((sec) => {
+                sec.classList.add('hidden');
+            });
+            document.querySelector('.' + section).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
